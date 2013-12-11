@@ -5,7 +5,7 @@ setup(
     name = "timedelta-tool",
     version = "0.1.0",
     package_dir = {'' : 'src'},
-    packages = find_packages('src'),
+    py_modules=['timedelta_tool'],
     entry_points = {
         'console_scripts': [
             'timedelta = timedelta_tool:main',
