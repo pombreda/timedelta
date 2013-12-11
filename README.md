@@ -1,7 +1,17 @@
 timedelta
 =========
 
-Simple time delta tool. Examples:
+Simple time delta tool. 
+
+Install
+-------
+
+```bash
+pip install timedelta-tool
+```
+
+Examples
+--------
 
 ```bash
 $> timedelta 1330 1400
