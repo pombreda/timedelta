@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 setup(
     name = "timedelta-tool",
-    version = "0.1.0",
+    version = "0.2.0",
     package_dir = {'' : 'src'},
     py_modules=['timedelta_tool'],
     entry_points = {

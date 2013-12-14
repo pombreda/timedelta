@@ -22,7 +22,10 @@ def add(current, starttime, endtime):
                 arg[:2], arg[2:]
             )
         )
-    current += (both[1] - both[0]).total_seconds() / 3600.0
+    new = (both[1] - both[0]).total_seconds() / 3600.0
+    if new < 0:
+        new = 24 + new
+    current += new
     print("> %.2f" % current)
     return current
 
@@ -30,12 +33,11 @@ def add(current, starttime, endtime):
 def main():
     try:
         parser = argparse.ArgumentParser(
-            description=(
-    """Time delta in hours with simple input:
+            description=("""
+Time delta in hours with simple input:
 
-    $> timedelta 1440 1500
-    -> 0.33"""
-            ),
+$> timedelta 1440 1500
+-> 0.33     """),
         )
 
         parser.add_argument(
